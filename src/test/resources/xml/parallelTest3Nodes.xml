@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG com Grid" parallel="tests" thread-count="3">
+    <test name="Teste Chrome" parallel="methods" thread-count="1">
+        <parameter name="Browser" value="chrome"/>
+        <classes>
+            <class name="br.com.vemser.tests.LoginTest"/>
+            <class name="br.com.vemser.tests.SignUpTest"/>
+            <class name="br.com.vemser.tests.ForgotPasswordTest"/>
+        </classes>
+    </test>
+    <test name="Teste Edge" parallel="methods" thread-count="1">
+        <parameter name="Browser" value="edge"/>
+        <classes>
+            <class name="br.com.vemser.tests.LoginTest"/>
+            <class name="br.com.vemser.tests.SignUpTest"/>
+            <class name="br.com.vemser.tests.ForgotPasswordTest"/>
+        </classes>
+    </test>
+    <test name="Teste Firefox" parallel="methods" thread-count="1">
+        <parameter name="Browser" value="firefox"/>
+        <classes>
+            <class name="br.com.vemser.tests.LoginTest"/>
+            <class name="br.com.vemser.tests.SignUpTest"/>
+            <class name="br.com.vemser.tests.ForgotPasswordTest"/>
+        </classes>
+    </test>
+</suite>
